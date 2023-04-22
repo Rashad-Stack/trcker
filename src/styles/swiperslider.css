@@ -1,0 +1,6 @@
+.swiper-pagination-bullet-active {
+    background-color: #ad1418;
+  }
+  .swiper-pagination-bullet {
+    transform: translateX(-140px);
+  }
