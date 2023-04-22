@@ -1,19 +1,23 @@
-import React, { useContext } from 'react'
-import { Link, useMatch } from 'react-router-dom'
-import { ThemeContext } from '../../context/ThemeProvider';
-import { Button, ThemeToggle } from '../ui';
+import React, { useContext } from "react";
+import { Link, useMatch, useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeProvider";
+import { Button, ThemeToggle } from "../ui";
 
 export default function DesktopNav() {
-    const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
-      <>
-                <ul className="hidden md:flex items-center gap-4">
+    <>
+      <ul className="hidden md:flex items-center gap-4">
         <li className="text-gray-300 flex gap-4 items-center">
           <Link
-
             to="/"
-            className={useMatch("/")?"font-bold text-primary":"text-sm text-gray-400 hover:text-gray-500 font-semibold"}
+            className={
+              useMatch("/")
+                ? "font-bold text-primary"
+                : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
+            }
           >
             Start
           </Link>
@@ -34,9 +38,12 @@ export default function DesktopNav() {
         </li>
         <li className="text-gray-300 flex gap-4 items-center">
           <Link
-
             to="/how-it-works"
-            className={useMatch("/how-it-works")?"font-bold text-primary":"text-sm text-gray-400 hover:text-gray-500 font-semibold"}
+            className={
+              useMatch("/how-it-works")
+                ? "font-bold text-primary"
+                : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
+            }
           >
             How it works
           </Link>
@@ -57,9 +64,12 @@ export default function DesktopNav() {
         </li>
         <li className="text-gray-300 flex gap-4 items-center">
           <Link
-
             to="/price"
-            className={useMatch("/price")?"font-bold text-primary":"text-sm text-gray-400 hover:text-gray-500 font-semibold"}
+            className={
+              useMatch("/price")
+                ? "font-bold text-primary"
+                : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
+            }
           >
             Pricing
           </Link>
@@ -80,9 +90,12 @@ export default function DesktopNav() {
         </li>
         <li className="text-gray-300 flex gap-4 items-center">
           <Link
-
             to="/contact"
-            className={useMatch("/contact")?"font-bold text-primary":"text-sm text-gray-400 hover:text-gray-500 font-semibold"}
+            className={
+              useMatch("/contact")
+                ? "font-bold text-primary"
+                : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
+            }
           >
             Contact us
           </Link>
@@ -90,11 +103,15 @@ export default function DesktopNav() {
       </ul>
       <div className="hidden md:flex items-center gap-4">
         <div className="flex items-center gap-4">
-          <Button title="Sign in" onClick={() => null} />
-          <Button title="Sign up" onClick={() => null} colored />
+          <Button title="Sign in" onClick={() => navigate("/login")} />
+          <Button
+            title="Sign up"
+            onClick={() => navigate("/register")}
+            colored
+          />
         </div>
         <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
-        </div>
+      </div>
     </>
-  )
+  );
 }

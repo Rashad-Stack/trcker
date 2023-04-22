@@ -8,8 +8,8 @@ import logo from "../../assets/images/logo.png";
 export default function MobileNav({ isMenuOpen, onClick }) {
   return (
     <div
-      className={`flex md:hidden flex-col justify-between absolute h-screen w-96 bg-light-secondary dark:bg-dark-tertiary left-0 top-0 p-4 transition-all ease-in-out ${
-        isMenuOpen ? "translate-x-0" : "-translate-x-full"
+      className={`flex md:hidden flex-col justify-between fixed min-h-full h-screen w-full sm:w-96 bg-light-secondary dark:bg-dark-tertiary left-0 top-0 p-4 transition-all ease-in-out ${
+        isMenuOpen ? "translate-x-0 z-50" : "-translate-x-full"
       }`}
     >
       <div  className="px-6">

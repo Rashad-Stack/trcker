@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Main } from "./layouts";
+import { Register } from "./pages/auth";
+
 function App() {
   const authChecked = useAuthCheck();
 
@@ -11,16 +13,30 @@ function App() {
     <Routes>
       {/* Public routes */}
       <Route path="/" element={<PublicRoutes />}>
-          <Route path="/login" element={<div>Login</div>} />
-          <Route path="/register" element={<div>Register</div>}/>
-        <Route path="/" element={<Main><div className="dark:bg-black bg-white">Home</div></Main>} />
-        <Route path="/start" element={<Main><div className="dark:bg-black bg-white">Home</div></Main>} />
+        <Route path="/login" element={<div>Login</div>} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/"
+          element={
+            <Main>
+              <div className="bg-white dark:bg-black">Home</div>
+            </Main>
+          }
+        />
+        <Route
+          path="/start"
+          element={
+            <Main>
+              <div className="bg-white dark:bg-black">Home</div>
+            </Main>
+          }
+        />
       </Route>
       {/* Privet Routes */}
       <Route path="/" element={<PrivetRoutes />}></Route>
 
-        {/* 404 Not Found */}
-        <Route path="*" element={<div>404 Page not found!</div>} />
+      {/* 404 Not Found */}
+      <Route path="*" element={<div>404 Page not found!</div>} />
     </Routes>
   );
 }
