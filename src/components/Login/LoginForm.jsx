@@ -44,7 +44,7 @@ export default function LoginForm() {
           <div className="text-red-400">{formik.errors.password}</div>
         )}
       </div>
-      <Button title="Submit" colored />
+      <Button title="Login" colored />
     </form>
   );
 }

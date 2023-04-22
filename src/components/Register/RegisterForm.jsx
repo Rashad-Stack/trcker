@@ -88,7 +88,7 @@ export default function RegisterForm() {
         )}
       </div>
 
-      <Button title="Submit" colored />
+      <Button title="Register" colored />
     </form>
   );
 }
