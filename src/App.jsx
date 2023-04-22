@@ -3,6 +3,7 @@ import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Main } from "./layouts";
 import { Login, Register } from "./pages/auth";
+import Home from "./pages/Home";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -13,16 +14,9 @@ function App() {
     <Routes>
       {/* Public routes */}
       <Route path="/" element={<PublicRoutes />}>
-        <Route path="/login" element={<Login/>} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/"
-          element={
-            <Main>
-              <div className="bg-white dark:bg-black">Home</div>
-            </Main>
-          }
-        />
+        <Route path="/" element={<Home />} />
         <Route
           path="/start"
           element={
