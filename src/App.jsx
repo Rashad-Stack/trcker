@@ -27,7 +27,10 @@ function App() {
         />
       </Route>
       {/* Privet Routes */}
-      <Route path="/" element={<PrivetRoutes />}></Route>
+        <Route path="/" element={<PrivetRoutes />}>
+          <Route path="/panel/groups" element={<div>Group comming son</div>}/>
+          <Route path="/panel/keywords" element={<div>Keyword comming son</div>}/>
+      </Route>
 
       {/* 404 Not Found */}
       <Route path="*" element={<div>404 Page not found!</div>} />

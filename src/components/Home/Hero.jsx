@@ -5,7 +5,7 @@ import heroImage from "../../assets/images/facebook-groups-monitor6.svg"
 export default function Hero() {
   return (
     <section
-      className={`bg-[url('../assets/images/light_lines.svg')] dark:bg-[url('../assets/images/dark_lines.svg')] overflow-hidden bg-no-repeat bg-cover`}
+      className={`bg-light-secondary dark:bg-dark-secondary bg-[url('../assets/images/light_lines.svg')] dark:bg-[url('../assets/images/dark_lines.svg')] overflow-hidden bg-no-repeat bg-cover`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="flex flex-wrap -mx-4 pt-20 pb-20">
@@ -20,7 +20,7 @@ export default function Hero() {
                 </h1>
               </div>
               <div className="max-w-sm mx-auto lg:mx-0">
-                <p className="mb-6 text-gray-400 leading-loose">
+                <p className="mb-6 text-gray-500 leading-loose">
                   Follow public and private Facebook groups. Receive alerts and
                   notifications as soon as there is a new post or comment with
                   your keyword even if you are not an admin.
