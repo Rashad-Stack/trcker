@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Main } from "./layouts";
-import { Register } from "./pages/auth";
+import { Login, Register } from "./pages/auth";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -13,7 +13,7 @@ function App() {
     <Routes>
       {/* Public routes */}
       <Route path="/" element={<PublicRoutes />}>
-        <Route path="/login" element={<div>Login</div>} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register />} />
         <Route
           path="/"
