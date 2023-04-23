@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import React from "react";
 
 import { validationSchema } from "./formValidator";
-import { Button } from "../ui";
+import { SubmitButton } from "../ui";
 
 export default function LoginForm() {
   const formik = useFormik({
@@ -44,7 +44,7 @@ export default function LoginForm() {
           <div className="text-red-400">{formik.errors.password}</div>
         )}
       </div>
-      <Button title="Login" colored />
+      <SubmitButton title="Login" colored />
     </form>
   );
 }

@@ -25,11 +25,11 @@ export default function MobileNav({ isMenuOpen, onClick }) {
           <li className="text-gray-300 flex gap-4 items-center">
             <Link
               to="/"
-              className={
+              className={`font-semibold text-sm ${
                 useMatch("/")
-                  ? "font-bold text-primary"
-                  : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
-              }
+                  ? "text-primary"
+                  : "text-gray-700 dark:text-dark-paragraph hover:text-gray-500 dark:hover:text-gray-400 "
+              }`}
             >
               Start
             </Link>
@@ -37,11 +37,11 @@ export default function MobileNav({ isMenuOpen, onClick }) {
           <li className="text-gray-300 flex gap-4 items-center">
             <Link
               to="/how-it-works"
-              className={
+              className={`font-semibold text-sm ${
                 useMatch("/how-it-works")
-                  ? "font-bold text-primary"
-                  : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
-              }
+                  ? "text-primary"
+                  : "text-gray-700 dark:text-dark-paragraph hover:text-gray-500 dark:hover:text-gray-400 "
+              }`}
             >
               How it works
             </Link>
@@ -49,11 +49,11 @@ export default function MobileNav({ isMenuOpen, onClick }) {
           <li className="text-gray-300 flex gap-4 items-center">
             <Link
               to="/price"
-              className={
+              className={`font-semibold text-sm ${
                 useMatch("/price")
-                  ? "font-bold text-primary"
-                  : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
-              }
+                  ? "text-primary"
+                  : "text-gray-700 dark:text-dark-paragraph hover:text-gray-500 dark:hover:text-gray-400 "
+              }`}
             >
               Pricing
             </Link>
@@ -61,11 +61,11 @@ export default function MobileNav({ isMenuOpen, onClick }) {
           <li className="text-gray-300 flex gap-4 items-center">
             <Link
               to="/contact"
-              className={
+              className={`font-semibold text-sm ${
                 useMatch("/contact")
-                  ? "font-bold text-primary"
-                  : "text-sm text-gray-400 hover:text-gray-500 font-semibold"
-              }
+                  ? "text-primary"
+                  : "text-gray-700 dark:text-dark-paragraph hover:text-gray-500 dark:hover:text-gray-400 "
+              }`}
             >
               Contact us
             </Link>
@@ -73,8 +73,8 @@ export default function MobileNav({ isMenuOpen, onClick }) {
         </ul>
       </div>
       <div className="flex flex-col gap-4">
-        <Button title="Sign in" onClick={() => null} />
-        <Button title="Sign up" onClick={() => null} colored />
+        <Button title="Sign in" to="/login" big />
+        <Button title="Sign up" to="/register" colored big/>
         <p className="text-xs text-gray-400 text-center">
           © {new Date().getFullYear()} All rights reserved.
         </p>

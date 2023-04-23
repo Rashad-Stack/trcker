@@ -32,7 +32,7 @@ export default function Review({ review = {} }) {
               fill="currentColor"
             />
           </svg>
-          <h3 className="text-black dark:text-white mb-6 text-3xl lg:text-4xl font-bold font-heading">
+          <h3 className="text-light-title dark:text-white mb-6 text-3xl lg:text-4xl font-bold font-heading">
           {quote}
           </h3>
         </div>

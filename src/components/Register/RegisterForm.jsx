@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import React from "react";
 
 import { validationSchema } from "./formValidator";
-import { Button } from "../ui";
+import { SubmitButton } from "../ui";
 
 export default function RegisterForm() {
   const formik = useFormik({
@@ -88,7 +88,7 @@ export default function RegisterForm() {
         )}
       </div>
 
-      <Button title="Register" colored />
+      <SubmitButton title="Register" colored />
     </form>
   );
 }

@@ -8,11 +8,13 @@ export default {
         primary: "#ad1418",
         light: {
           secondary: "#dfe3e8",
-          tertiary: "#ffffff"
+          tertiary: "#ffffff",
+          title:"#161C24",
         },
         dark: {
           secondary: "#161c24",
-          tertiary: "#212b36"
+          tertiary: "#212b36",
+          paragraph: "#cfcfd4",
         },
         screens: {
           'dark': {'raw': '(prefers-color-scheme: dark)'},

@@ -20,7 +20,7 @@ export default function Footer() {
                 width="auto"
               />
             </Link>
-            <p className="mt-4 mb-4 max-w-sm text-gray-400 leading-loose">
+            <p className="mt-4 mb-4 max-w-sm  text-gray-700 dark:text-dark-paragraph leading-loose">
               Best online tool for monitoring Facebook public and private
               groups.{" "}
             </p>
@@ -31,7 +31,7 @@ export default function Footer() {
               <ul>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/"
                     title="online service to monitor fb groups"
                   >
@@ -40,7 +40,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/how-it-works"
                     title="How does GroupsTracker works?"
                   >
@@ -49,7 +49,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/pricing"
                     title="How much does it cost to use GroupsTracker.com?"
                   >
@@ -58,7 +58,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/api-for-facebook-groups"
                     title="Facebook Groups API, Webhooks GroupsTracker.com"
                   >
@@ -67,7 +67,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/slack-integration-for-facebook-groups"
                     title="Sending Facebook Groups Posts to Slack GroupsTracker.com"
                   >
@@ -76,7 +76,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     href="/chrome-plugin-for-monitoring-facebook-groups"
                     title="Chrome plugin for Facebook Groups GroupsTracker.com"
                   >
@@ -85,7 +85,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/how-to-monitor-brands-on-facebook-groups"
                     title="Brands tracking on Facebook Groups GroupsTracker.com"
                   >
@@ -94,7 +94,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/how-to-extract-facebook-groups-members"
                     title="Facebook Group extractorGroupsTracker.com"
                   >
@@ -108,7 +108,7 @@ export default function Footer() {
               <ul>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/terms-of-service"
                     title="Rules and regulation of GroupsTracker service "
                   >
@@ -117,7 +117,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/privacy-policy"
                     title="Clients data and cookies policy"
                   >
@@ -126,7 +126,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/groouply-alternative"
                     title="Groouply.com Alternative"
                   >
@@ -135,7 +135,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/phantombuster-alternative"
                     title="Phantombuster.com Alternative"
                   >
@@ -144,7 +144,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/affiliate"
                     title="GroupsTracker affiliate program"
                   >
@@ -158,7 +158,7 @@ export default function Footer() {
               <ul>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/help"
                     title="Help for GroupsTracker.com"
                   >
@@ -167,7 +167,7 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="text-gray-400 hover:text-gray-600"
+                    className=" text-gray-700 dark:text-dark-paragraph"
                     to="/contact"
                     title="Have any problem or question?"
                   >
@@ -187,8 +187,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="w-full lg:text-center text-sm text-gray-400 border-t border-gray-300 dark:border-gray-800 pt-12 mt-16">
-        © 2023. All rights reserved.
+      <p className="w-full text-center text-sm  text-gray-700 dark:text-dark-paragraph border-t border-gray-300 dark:border-gray-800 pt-12 mt-16">
+        © {new Date().getFullYear()} All rights reserved.
       </p>
     </footer>
   );

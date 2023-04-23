@@ -17,7 +17,7 @@ export default function HowItWorks() {
           <div className="lg:pl-12 relative w-full lg:w-1/2">
             <div className="max-w-md">
               <span className="text-primary font-bold">Short presentation</span>
-              <h2 className="mb-2 text-4xl lg:text-5xl font-bold font-heading text-black dark:text-white">
+              <h2 className="text-4xl lg:text-5xl font-bold font-heading text-light-title dark:text-white !leading-relaxed">
                 How it works?
               </h2>
               <div className="flex flex-wrap -mx-4">
@@ -28,7 +28,7 @@ export default function HowItWorks() {
                     </span>
                   </div>
                   <div className="inline-block ml-2">
-                    <h3 className=" text-black dark:text-white text-2xl font-bold font-heading">
+                    <h3 className=" text-light-title dark:text-white text-2xl font-bold font-heading">
                       {" "}
                       <Link
                         className="text-primary"
@@ -39,7 +39,7 @@ export default function HowItWorks() {
                       </Link>
                       (for free)
                     </h3>
-                    <p className="mb-4 text-gray-500  ">
+                    <p className="mb-4 text-gray-700 dark:text-dark-paragraph ">
                       It&apos;s free, easy and fast (takes 1 minute).
                     </p>
                   </div>
@@ -51,7 +51,7 @@ export default function HowItWorks() {
                     </span>
                   </div>
                   <div className="inline-block ml-2">
-                    <h3 className="text-black dark:text-white text-2xl font-bold font-heading">
+                    <h3 className="text-light-title dark:text-white text-2xl font-bold font-heading">
                       {" "}
                       <Link
                         className="text-primary"
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                       </Link>
                       Facebook groups
                     </h3>
-                    <p className="mb-4 text-gray-500  ">
+                    <p className="mb-4 text-gray-700 dark:text-dark-paragraph">
                       Add links to the groups you want to monitor.
                     </p>
                   </div>
@@ -74,7 +74,7 @@ export default function HowItWorks() {
                     </span>
                   </div>
                   <div className="inline-block ml-2">
-                    <h3 className="text-black dark:text-white  text-2xl font-bold font-heading">
+                    <h3 className="text-light-title dark:text-white  text-2xl font-bold font-heading">
                       {" "}
                       <Link
                         className="text-primary"
@@ -85,7 +85,7 @@ export default function HowItWorks() {
                       </Link>
                       keywords
                     </h3>
-                    <p className="mb-4 text-gray-500 ">
+                    <p className="mb-4 text-gray-700 dark:text-dark-paragraph">
                       If only any of the keywords appear in post or comment, you
                       will be notified.
                     </p>
@@ -98,10 +98,10 @@ export default function HowItWorks() {
                     </span>
                   </div>
                   <div className="inline-block ml-2">
-                    <h3 className="text-black dark:text-white  text-2xl font-bold font-heading">
+                    <h3 className="text-light-title dark:text-white  text-2xl font-bold font-heading">
                       That is all
                     </h3>
-                    <p className="mb-4 text-gray-500 ">
+                    <p className="mb-4 text-gray-700 dark:text-dark-paragraph">
                       You will be notified as soon as new post or comment appear
                       on the group.
                     </p>

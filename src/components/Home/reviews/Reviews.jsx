@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import userImg from "../../assets/images/user.jpeg"
+import userImg from "../../../assets/images/user.jpeg";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "../../styles/swiperslider.css";
+import "../../../styles/swiperslider.css";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
@@ -24,7 +24,7 @@ export default function Reviews() {
           centeredSlides={true}
           autoplay={{
             delay: 5000,
-            disableOnInteraction: false,
+            disableOnInteraction: false
           }}
           modules={[Autoplay, Pagination]}
           className="mySwiper"
@@ -44,7 +44,7 @@ const reviews = [
     id: 1,
     name: "Peter Groves",
     designation: "Head of PR Monkeys",
-    image:userImg,
+    image: userImg,
     quote:
       "We use GroupsTracker.com to track mentions of our customers. Thanks to this, we can react quickly and extinguish fires before they break out for good."
   },
@@ -52,8 +52,8 @@ const reviews = [
     id: 2,
     name: "Peter Groves",
     designation: "Head of PR Monkeys",
-    image:userImg,
+    image: userImg,
     quote:
       "We use GroupsTracker.com to track mentions of our customers. Thanks to this, we can react quickly and extinguish fires before they break out for good."
-  },
+  }
 ];

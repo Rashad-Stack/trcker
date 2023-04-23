@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SubmitButton } from "../ui";
 
 export default function Subscription() {
   const [email, setEmail] = useState("");
@@ -13,10 +14,10 @@ export default function Subscription() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="flex flex-wrap items-center -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <h2 className="block text-black !leading-relaxed dark:text-white text-4xl  lg:text-5xl font-bold">
+            <h2 className="block text-light-title !leading-relaxed dark:text-white text-4xl  lg:text-5xl font-bold">
               Start monitoring Facebook groups
             </h2>
-            <p className="max-w-lg text-gray-500 dark:text-gray-400 leading-loose">
+            <p className="max-w-lg text-gray-700 dark:text-dark-paragraph leading-loose">
               Receive alerts on keywords that interest you.
             </p>
           </div>
@@ -40,13 +41,11 @@ export default function Subscription() {
                   }}
                   data-temp-mail-org={0}
                 />
-                <button className="inline-block py-2 px-6 bg-primary text-white font-bold leading-loose rounded-l-xl rounded-t-xl transition duration-200">
-                  Get Started
-                </button>
+                <SubmitButton title="Get Started" colored/>
               </form>
             </div>
             <div>
-              <ul className="flex items-center lg:justify-end text-gray-500">
+              <ul className="flex items-center lg:justify-end  text-gray-700 dark:text-dark-paragraph">
                 <li className="mr-4 flex items-center">
                   <span>
                     <svg
@@ -62,7 +61,7 @@ export default function Subscription() {
                       />
                     </svg>
                   </span>{" "}
-                  <span className=" text-gray-500 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-dark-paragraph">
                     No credit card needed
                   </span>
                 </li>
@@ -81,7 +80,7 @@ export default function Subscription() {
                       />
                     </svg>
                   </span>{" "}
-                  <span className=" text-gray-500 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-dark-paragraph">
                     Easy to use
                   </span>
                 </li>

@@ -1,12 +1,18 @@
-export default function Button({ title, onClick, colored }) {
+import { Link } from "react-router-dom";
+
+export default function Button({ title, to, colored, big }) {
   return (
-    <button
-      className={`inline-block py-2 px-6 text-sm font-bold rounded-l-xl rounded-t-xl transition duration-200 ${
+    <Link
+      className={`${
+        big
+          ? "inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose font-semibold text-center"
+          : "inline-block py-2 px-6 text-sm font-bold"
+      } ${
         colored ? "bg-primary text-white" : "bg-gray-300 text-black"
-      }`}
-      onClick={onClick}
+      } rounded-l-xl rounded-t-xl`}
+      to={to}
     >
       {title}
-    </button>
+    </Link>
   );
 }
