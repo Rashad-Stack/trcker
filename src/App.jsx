@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
-import {Home, HowItWorks } from "./pages";
+import {Home, HowItWorks, PricingPlan } from "./pages";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -15,6 +15,7 @@ function App() {
       {/* Public routes */}
       <Route path="/" element={<Home />} />
       <Route path="/how-it-works" element={<HowItWorks />} />
+      <Route path="/price" element={<PricingPlan />} />
 
       {/* this routes can not be visible after logged in */}
       <Route path="/*" element={<PublicRoutes />}>

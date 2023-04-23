@@ -53,6 +53,7 @@ export default function Comments() {
                     type="text"
                     placeholder="Name"
                     name="name"
+                    required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -63,6 +64,7 @@ export default function Comments() {
                     type="email"
                     placeholder="name@example.com (not visible)"
                     name="email"
+                    required
                     data-temp-mail-org={0}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -74,6 +76,7 @@ export default function Comments() {
                     type="text"
                     placeholder="Comment..."
                     name="opinion"
+                    required
                     value={messsage}
                     onChange={(e) => setMessage(e.target.value)}
                   />
