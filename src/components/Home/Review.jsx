@@ -11,7 +11,7 @@ export default function Review({ review = {} }) {
           <img
             className="mb-6 mx-auto w-32 h-32 rounded-full object-cover"
             src={image}
-            alt
+            alt={name}
           />
           <h4 className="text-xl">{name}</h4>
           <p className="text-primary">{designation}</p>
