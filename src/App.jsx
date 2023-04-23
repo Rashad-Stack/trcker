@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
+
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
-import { Main } from "./layouts";
 import { Login, Register } from "./pages/auth";
-import Home from "./pages/Home";
+import {Home, HowItWorks } from "./pages";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -13,23 +13,19 @@ function App() {
   ) : (
     <Routes>
       {/* Public routes */}
-      <Route path="/" element={<PublicRoutes />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/start"
-          element={
-            <Main>
-              <div className="bg-white dark:bg-black">Home</div>
-            </Main>
-          }
-        />
+      <Route path="/" element={<Home />} />
+      <Route path="/how-it-works" element={<HowItWorks />} />
+
+      {/* this routes can not be visible after logged in */}
+      <Route path="/*" element={<PublicRoutes />}>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Route>
-      {/* Privet Routes */}
-        <Route path="/" element={<PrivetRoutes />}>
-          <Route path="/panel/groups" element={<div>Group comming son</div>}/>
-          <Route path="/panel/keywords" element={<div>Keyword comming son</div>}/>
+
+      {/* Privet Routes, This routes can not be visible before logged in */}
+      <Route path="/*" element={<PrivetRoutes />}>
+        <Route path="panel/groups" element={<div>Group comming son</div>} />
+        <Route path="panel/keywords" element={<div>Keyword comming son</div>} />
       </Route>
 
       {/* 404 Not Found */}

@@ -8,7 +8,7 @@ import logo from "../../assets/images/logo.png";
 export default function MobileNav({ isMenuOpen, onClick }) {
   return (
     <div
-      className={`flex md:hidden flex-col justify-between fixed min-h-full h-screen w-full sm:w-96 bg-light-secondary dark:bg-dark-tertiary left-0 top-0 p-4 transition-all ease-in-out ${
+      className={`flex lg:hidden flex-col justify-between fixed min-h-full h-screen w-full sm:w-96 bg-light-secondary dark:bg-dark-tertiary left-0 top-0 p-4 transition-all ease-in-out ${
         isMenuOpen ? "translate-x-0 z-50" : "-translate-x-full"
       }`}
     >
@@ -21,7 +21,7 @@ export default function MobileNav({ isMenuOpen, onClick }) {
             <FaTimes size={20} />
           </button>
         </div>
-        <ul className="md:hidden flex flex-col gap-8 mt-10">
+        <ul className="lg:hidden flex flex-col gap-8 mt-10">
           <li className="text-gray-300 flex gap-4 items-center">
             <Link
               to="/"

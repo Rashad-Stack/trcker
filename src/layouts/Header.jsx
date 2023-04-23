@@ -21,7 +21,7 @@ export default function Header() {
           isMenuOpen={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
-        <div className="md:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-4">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
           <NavTogglerButton
             isMenuOpen={isMenuOpen}

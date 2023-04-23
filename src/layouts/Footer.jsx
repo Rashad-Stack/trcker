@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-light-secondary dark:bg-dark-secondary pb-10">
-      <div className="container mx-auto px-4 sm:px-6 max-w-6xl flex flex-col items-center justify-between">
+    <footer className="relative bg-light-secondary dark:bg-dark-secondary">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl flex flex-col items-center justify-between  py-20">
         <div className="w-full flex flex-wrap">
           <div className="w-full lg:w-1/3 mb-16 lg:mb-0">
             <Link
@@ -187,7 +187,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="w-full text-center text-sm  text-gray-700 dark:text-dark-paragraph border-t border-gray-300 dark:border-gray-800 pt-12 mt-16">
+      <p className="w-full text-center text-sm  text-gray-700 dark:text-dark-paragraph border-t border-gray-300 dark:border-gray-800 p-10">
         © {new Date().getFullYear()} All rights reserved.
       </p>
     </footer>

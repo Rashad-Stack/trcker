@@ -3,7 +3,7 @@ import React from 'react'
 export default function NavTogglerButton({onClick,isMenuOpen}) {
   return (
     <button
-    className="block md:hidden"
+    className="block lg:hidden"
     onClick={onClick}
   >
     <svg

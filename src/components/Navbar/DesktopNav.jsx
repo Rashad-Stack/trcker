@@ -8,7 +8,7 @@ export default function DesktopNav() {
 
   return (
     <>
-      <ul className="hidden md:flex items-center gap-5">
+      <ul className="hidden lg:flex items-center gap-5">
         <li className="text-gray-700 dark:text-dark-paragraph flex gap-4 items-center">
           <Link
             to="/"
@@ -103,7 +103,7 @@ export default function DesktopNav() {
           </Link>
         </li>
       </ul>
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden lg:flex items-center gap-4">
         <div className="flex items-center gap-4">
           <Button title="Sign in" to="/login" />
           <Button title="Sign up" to="/register" colored />
