@@ -6,7 +6,8 @@ import {
   Hero,
   HowItWorks,
   PricePlan,
-  Reviews
+  Reviews,
+  Subscription
 } from "../components/Home";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Reviews />
       <PricePlan />
       <Counter />
+      <Subscription />
     </Main>
   );
 }
