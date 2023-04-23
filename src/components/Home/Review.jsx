@@ -13,7 +13,7 @@ export default function Review({ review = {} }) {
             src={image}
             alt={name}
           />
-          <h4 className="text-xl">{name}</h4>
+          <h4 className="text-black dark:text-white text-xl">{name}</h4>
           <p className="text-primary">{designation}</p>
         </div>
         <div className="w-full lg:w-2/3">
