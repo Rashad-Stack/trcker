@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { validationSchema } from "./formValidator";
 import { SubmitButton } from "../ui";
@@ -8,7 +9,8 @@ export default function LoginForm() {
   const formik = useFormik({
     initialValues: {
       email: "",
-      password: ""
+      password: "",
+      remember: false
     },
     validationSchema,
     onSubmit(values, { resetForm }) {
@@ -44,7 +46,29 @@ export default function LoginForm() {
           <div className="text-red-400">{formik.errors.password}</div>
         )}
       </div>
+      <div className="flex justify-between">
+        <label
+          htmlFor="remember"
+          className="text-gray-700 dark:text-dark-paragraph flex flex-row-reverse gap-2 text-base"
+        >
+          Remember Me
+          <input
+            id="remember"
+            type="checkbox"
+            {...formik.getFieldProps("remember")}
+          />
+        </label>
+        <Link to="/resetPass" className="text-primary hover:underline">
+          Forgot Your Password?
+        </Link>
+      </div>
       <SubmitButton title="Login" colored />
+      <p className="text-center text-gray-700 dark:text-dark-paragraph">
+        Dont&apos; have an account?{" "}
+        <Link to="/register" className="text-primary hover:underline">
+          Register
+        </Link>
+      </p>
     </form>
   );
 }

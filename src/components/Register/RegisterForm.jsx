@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { validationSchema } from "./formValidator";
 import { SubmitButton } from "../ui";
@@ -89,6 +90,13 @@ export default function RegisterForm() {
       </div>
 
       <SubmitButton title="Register" colored />
+
+      <p className="text-center text-gray-700 dark:text-dark-paragraph">
+        Already have an account? {" "}
+        <Link to="/login" className="text-primary hover:underline">
+          Login
+        </Link>
+      </p>
     </form>
   );
 }

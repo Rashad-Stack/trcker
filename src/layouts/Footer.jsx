@@ -50,7 +50,7 @@ export default function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-gray-700 dark:text-dark-paragraph"
-                    to="/pricing"
+                    to="/price"
                     title="How much does it cost to use GroupsTracker.com?"
                   >
                     Pricing Plans
