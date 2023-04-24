@@ -11,24 +11,26 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="relative bg-light-secondary dark:bg-dark-secondary">
-      <div className="container mx-auto px-4 sm:px-6 max-w-6xl flex items-center justify-between">
-        <Link to="/">
-          <img src={logo} alt="logo" className="w-14 md:w-16 p-3" />
-        </Link>
-        <DesktopNav />
-        <MobileNav
-          isMenuOpen={isMenuOpen}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        />
-        <div className="lg:hidden flex items-center gap-4">
-          <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
-          <NavTogglerButton
+    <header>
+      <nav className="relative bg-light-secondary dark:bg-dark-secondary">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl flex items-center justify-between">
+          <Link to="/">
+            <img src={logo} alt="logo" className="w-14 md:w-16 p-3" />
+          </Link>
+          <DesktopNav />
+          <MobileNav
             isMenuOpen={isMenuOpen}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           />
+          <div className="lg:hidden flex items-center gap-4">
+            <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
+            <NavTogglerButton
+              isMenuOpen={isMenuOpen}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
