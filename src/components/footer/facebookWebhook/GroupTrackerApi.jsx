@@ -5,31 +5,34 @@ import setting from "../../../assets/images/settings.png";
 import { Button } from "../../ui";
 
 export default function GroupTrackerApi() {
+  const protocol = window.location.protocol;
+  const host = window.location.host;
+
   return (
     <div className="w-full py-20">
       <div className="mb-10 max-w-2xl mx-auto text-center">
         <div className="mt-2">
-          <h2 className="text-light-title dark:text-white mb-6 text-4xl lg:text-5xl font-bold font-heading">
+          <h2 className="text-light-title dark:text-white mb-6 text-4xl lg:text-5xl font-bold font-heading !leading-relaxed">
             GroupsTracker API for Facebook groups
           </h2>
         </div>
       </div>
       <div className="ml-2 lg:ml-8">
-        <h3 className="text-light-title dark:text-white text-3xl lg:text-4xl font-bold my-2 ">
+        <h3 className="text-light-title dark:text-white text-3xl lg:text-4xl font-bold my-2 !leading-relaxed">
           Download facebook posts
         </h3>
         <p className="text-gray-700 dark:text-dark-paragraph">
           How to download all posts from Facebook group to .CSV (Excell) file or
           as a JSON data?
         </p>
-        <h4 className="text-gray-700 dark:text-dark-paragraph text-2xl lg:text-3xl font-bold my-2">
+        <h4 className="text-gray-700 dark:text-dark-paragraph text-2xl lg:text-3xl font-bold my-2 !leading-relaxed">
           .CSV format
         </h4>
         <div className="flex flex-wrap -mx-6">
           <div className="w-full lg:w-1/2 px-6 text-gray-700 dark:text-dark-paragraph">
-            Go to "Groups" section and click icon to download file
+            {`Go to "Groups" section and click icon to download file`}{" "}
             <Link className=" text-primary font-bold" to="/groups">
-              https://www.groupstracker.com/panel/groups
+               {`${protocol}//${host}/groups`}
             </Link>
           </div>
           <div className="w-full lg:w-1/2 px-6 h-80">

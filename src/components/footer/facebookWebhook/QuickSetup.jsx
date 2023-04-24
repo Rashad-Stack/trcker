@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import setting from "../../../assets/images/settings.png";
 
 export default function QuickSetup() {
+  const protocol = window.location.protocol;
+  const host = window.location.host;
+
   return (
     <div className="w-full py-20">
       <div className="flex flex-wrap justify-between">
@@ -10,7 +13,7 @@ export default function QuickSetup() {
           <h2 className="text-light-title dark:text-white my-2 text-3xl lg:text-4xl font-bold mb-4">
             Quick setup
           </h2>
-          <ol style={{ "listStyle": "decimal" }}>
+          <ol style={{ listStyle: "decimal" }}>
             <li className="text-gray-700 dark:text-dark-paragraph leading-loose">
               <Link className="text-primary font-bold" to="/register">
                 Register
@@ -37,8 +40,8 @@ export default function QuickSetup() {
             </li>
             <li className="text-gray-500 leading-loose">
               Add your webhook url: <br />
-              <Link className="text-primary font-bold" href="/settings">
-                https://www.groupstracker.com/panel/settings
+              <Link className="text-primary font-bold" to="/setting">
+                {`${protocol}//${host}/settings`}
               </Link>
             </li>
           </ol>

@@ -1,7 +1,13 @@
 import React from "react";
 import Main from "../../layouts/Main";
-import { FacebookWebhookHeader, GroupTrackerApi, HowWebHookWorks, QuickSetup } from "../../components/footer";
-
+import {
+  FacebookWebhookHeader,
+  GroupTrackerApi,
+  HowWebHookWorks,
+  PostFormat,
+  QuickSetup
+} from "../../components/footer";
+import { Comments } from "../../components/HowItWorks";
 
 export default function FacebookWebhook() {
   return (
@@ -12,7 +18,9 @@ export default function FacebookWebhook() {
           <QuickSetup />
           <HowWebHookWorks />
           <GroupTrackerApi />
+          <PostFormat />
         </div>
+          <Comments />
       </section>
     </Main>
   );
