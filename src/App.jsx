@@ -4,7 +4,7 @@ import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
 import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
-import { FacebookWebhook } from "./pages/footerLinks";
+import { FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -19,6 +19,11 @@ function App() {
       <Route path="/price" element={<PricingPlan />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/api-for-facebook-groups" element={<FacebookWebhook />} />
+      <Route
+        path="/slack-integration-for-facebook-groups"
+        element={<SlackIntegration />}
+      />
+
       {/* this routes can not be visible after logged in */}
       <Route path="/" element={<PublicRoutes />}>
         <Route path="/login" element={<Login />} />
