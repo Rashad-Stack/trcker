@@ -29,6 +29,7 @@ function App() {
       <Route path="/" element={<PrivetRoutes />}>
         <Route path="panel/groups" element={<div>Group comming son</div>} />
         <Route path="panel/keywords" element={<div>Keyword comming son</div>} />
+        <Route path="/plan/:id" element={<div>Plan</div>} />
       </Route>
 
       {/* 404 Not Found */}
