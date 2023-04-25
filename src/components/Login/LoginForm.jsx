@@ -1,11 +1,13 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { validationSchema } from "./formValidator";
 import { SubmitButton } from "../ui";
+import { authContext } from "../../context/AuthContextProvider";
 
 export default function LoginForm() {
+  const { login } = useContext(authContext);
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -15,7 +17,7 @@ export default function LoginForm() {
     validationSchema,
     onSubmit(values, { resetForm }) {
       console.log(values);
-
+      login(values);
       resetForm();
     }
   });
