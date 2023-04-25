@@ -1,12 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import NavTogglerButton from "../Navbar/NavTogglerButton";
 import { ThemeToggle } from "../ui";
 import { ThemeContext } from "../../context/ThemeProvider";
-export default function MobileAside() {
+export default function MobileAside({ isShown, setIsShown }) {
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="lg:hidden py-6 px-6 border-b w-full">
@@ -16,7 +15,10 @@ export default function MobileAside() {
         </Link>
         <div className="flex gap-4">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
-          <NavTogglerButton />
+          <NavTogglerButton
+            onClick={() => setIsShown(!isShown)}
+            isMenuOpen={isShown}
+          />
         </div>
       </div>
     </nav>

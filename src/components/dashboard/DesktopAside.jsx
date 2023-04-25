@@ -17,18 +17,28 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeProvider";
 import { ThemeToggle } from "../ui";
 
-export default function DesktopAside() {
+export default function DesktopAside({ isShown }) {
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
   return (
-    <div className="hidden lg:block navbar-menu relative z-50">
-      <div className="navbar-backdrop fixed lg:hidden inset-0 bg-gray-800 opacity-10" />
+    <div
+      className={`lg:block navbar-menu relative z-50 ${
+        isShown ? "block" : "hidden"
+      }`}
+    >
+      <div
+        className={`fixed lg:hidden inset-0 bg-gray-800 opacity-10 ${
+          isShown ? "hidden" : "fixed"
+        }`}
+      />
       <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-3/4 lg:w-80 sm:max-w-xs pt-6 pb-8 bg-light-secondary dark:bg-dark-secondary border-r border-gray-300 dark:border-gray-800  overflow-y-auto scrollbar-none">
         <div className="flex justify-between w-full items-center px-6 pb-6 mb-6 lg:border-b border-gray-300 dark:border-gray-800">
           <Link className="text-xl font-semibold" href="/panel">
             <img className="h-8" src={logo} alt="logo" width="auto" />
           </Link>
-          <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
+          <div className="hidden lg:block">
+            <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
+          </div>
         </div>
         <div className="px-4 pb-6">
           <h3 className="mb-2 text-xs uppercase text-light-title dark:text-white font-medium">
