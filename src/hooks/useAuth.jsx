@@ -1,10 +1,10 @@
-
 export default function useAuth() {
-    const auth = false
-    
-    if (auth) {
-        return true
-    } else {
-        return false
-    }
+ 
+    const auth = true
+
+  if (auth) {
+    return true;
+  } else {
+    return false;
+  }
 }

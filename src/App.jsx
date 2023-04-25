@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
-import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
+import { Contact, DashBoard, Home, HowItWorks, PricingPlan } from "./pages";
 import { FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
 
 function App() {
@@ -13,27 +13,29 @@ function App() {
     <h1 className="text-3xl font-bold underline">...Loading</h1>
   ) : (
     <Routes>
-      {/* Public routes */}
-      <Route path="/" element={<Home />} />
-      <Route path="/how-it-works" element={<HowItWorks />} />
-      <Route path="/price" element={<PricingPlan />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/api-for-facebook-groups" element={<FacebookWebhook />} />
-      <Route
-        path="/slack-integration-for-facebook-groups"
-        element={<SlackIntegration />}
-      />
-
-      {/* this routes can not be visible after logged in */}
+      {/*Public routes this routes can not be visible after logged in */}
       <Route path="/" element={<PublicRoutes />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/price" element={<PricingPlan />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/api-for-facebook-groups" element={<FacebookWebhook />} />
+        <Route
+          path="/slack-integration-for-facebook-groups"
+          element={<SlackIntegration />}
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>
 
       {/* Privet Routes, This routes can not be visible before logged in */}
       <Route path="/" element={<PrivetRoutes />}>
-        <Route path="panel/groups" element={<div>Group comming son</div>} />
-        <Route path="panel/keywords" element={<div>Keyword comming son</div>} />
+        <Route path="/panel" element={<DashBoard/>} />
+        <Route path="/panel/groups" element={<div>Group comming son</div>} />
+        <Route
+          path="/panel/keywords"
+          element={<div>Keyword comming son</div>}
+        />
         <Route path="/plan/:id" element={<div>Plan</div>} />
       </Route>
 

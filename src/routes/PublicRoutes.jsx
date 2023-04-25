@@ -3,5 +3,5 @@ import useAuth from "../hooks/useAuth";
 
 export default function PublicRoutes() {
     const isLoggedIn = useAuth();
-    return isLoggedIn? <Navigate to="/"/>:<Outlet/>
+    return isLoggedIn? <Navigate to="/panel"/>:<Outlet/>
 }
