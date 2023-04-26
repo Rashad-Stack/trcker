@@ -3,8 +3,20 @@ import { Routes, Route } from "react-router-dom";
 import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
-import { Contact, DashBoard, Home, HowItWorks, PricingPlan } from "./pages";
+import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
 import { FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
+import {
+  Affiliate,
+  Dashboard,
+  Groups,
+  Help,
+  Keywords,
+  Logout,
+  Members,
+  Payments,
+  PostsAndComments,
+  Settings
+} from "./pages/dashboard";
 
 function App() {
   const authChecked = useAuthCheck();
@@ -30,12 +42,16 @@ function App() {
 
       {/* Privet Routes, This routes can not be visible before logged in */}
       <Route path="/" element={<PrivetRoutes />}>
-        <Route path="/panel" element={<DashBoard/>} />
-        <Route path="/panel/groups" element={<div>Group comming son</div>} />
-        <Route
-          path="/panel/keywords"
-          element={<div>Keyword comming son</div>}
-        />
+        <Route path="/panel" element={<Dashboard />} />
+        <Route path="/panel/groups" element={<Groups />} />
+        <Route path="/panel/keywords" element={<Keywords />} />
+        <Route path="/panel/hits" element={<PostsAndComments />} />
+        <Route path="/panel/members" element={<Members />} />
+        <Route path="/panel/payments" element={<Payments />} />
+        <Route path="/panel/affiliate" element={<Affiliate />} />
+        <Route path="/panel/settings" element={<Settings />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/plan/:id" element={<div>Plan</div>} />
       </Route>
 

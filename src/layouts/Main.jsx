@@ -8,7 +8,7 @@ export default function Main({ children, dasboard }) {
 
   return (
     <div className={`${isDarkMode ? "dark" : "light"}`}>
-      {!dasboard && <Header />}
+      <Header />
       <main
         className={`bg-light-secondary dark:bg-dark-secondary ${
           dasboard ? "min-h-screen" : "min-h-max"
@@ -16,7 +16,7 @@ export default function Main({ children, dasboard }) {
       >
         {children}
       </main>
-      {!dasboard && <Footer />}
+      <Footer />
     </div>
   );
 }
