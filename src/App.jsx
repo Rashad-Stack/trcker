@@ -4,7 +4,7 @@ import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
 import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
-import { BrandMonitoring, ChromePlugin, FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
+import { BrandMonitoring, ChromePlugin, FacebookWebhook, MemberExtracting, SlackIntegration, TermsConditions } from "./pages/footerLinks";
 import {
   Affiliate,
   Dashboard,
@@ -31,15 +31,23 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/price" element={<PricingPlan />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* Products Link */}
         <Route path="/api-for-facebook-groups" element={<FacebookWebhook />} />
         <Route
           path="/slack-integration-for-facebook-groups"
           element={<SlackIntegration />}
         />
         <Route path="/how-to-monitor-brands-on-facebook-groups" element={<BrandMonitoring />} />
+        <Route path="/how-to-extract-facebook-groups-members" element={<MemberExtracting />} />
         <Route path="/chrome-plugin-for-monitoring-facebook-groups" element={<ChromePlugin />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        
+        {/* Important Links */}
+        <Route path="/terms-of-service" element={<TermsConditions />} />
+
+
       </Route>
 
       {/* Privet Routes, This routes can not be visible before logged in */}
