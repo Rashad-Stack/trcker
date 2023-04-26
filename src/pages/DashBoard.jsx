@@ -1,5 +1,5 @@
 import React from "react";
-import { Aside, DashboardHeader } from "../components/dashboard";
+import { Aside, DashboardHeader, DashboardMain } from "../components/dashboard";
 import Main from "../layouts/Main";
 
 export default function DashBoard() {
@@ -7,6 +7,7 @@ export default function DashBoard() {
     <Main dasboard>
       <Aside />
       <DashboardHeader />
+      <DashboardMain />
     </Main>
   );
 }
