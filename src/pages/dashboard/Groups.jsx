@@ -39,6 +39,7 @@ export default function Groups() {
                             name="url"
                             value={groupLink}
                             onChange={(e) => setGropeLink(e.target.value)}
+                            required
                             placeholder="ex.: https://www.facebook.com/group..."
                           />
                         </div>
@@ -62,29 +63,35 @@ export default function Groups() {
         <div className="container px-4 mx-auto">
           <div>
             <div className="px-4">
-              <h2 className="text-2xl font-bold fmb-4">
+              <h2 className="text-light-title dark:text-white text-2xl font-bold fmb-4">
                 Tracked Facebook groups 0
               </h2>
             </div>
             <section className="py-8">
               <div className="container px-4 mx-auto">
-                <div className="p-4 mb-6 bg-white rounded shadow-xl">
+                <div className="p-4 mb-6 bg-light-tertiary dark:bg-dark-tertiary rounded shadow-xl">
                   <table className="w-full table-auto">
                     <thead>
                       <tr className="text-xs text-left text-gray-500">
-                        <th className="pb-3 font-medium">Group</th>
-                        <th className="pb-3 font-medium">
+                        <th className="text-gray-700 dark:text-dark-paragraph pb-3 font-medium">
+                          Group
+                        </th>
+                        <th className="text-gray-700 dark:text-dark-paragraph pb-3 font-medium">
                           Posts/
                           <br />
                           Comments
                         </th>
-                        <th className="pb-3 font-medium">
+                        <th className="text-gray-700 dark:text-dark-paragraph pb-3 font-medium">
                           Members/
                           <br />
                           Fetched
                         </th>
-                        <th className="pb-3 font-medium">Found</th>
-                        <th className="pb-3 font-medium">Action</th>
+                        <th className="text-gray-700 dark:text-dark-paragraph pb-3 font-medium">
+                          Found
+                        </th>
+                        <th className="text-gray-700 dark:text-dark-paragraph pb-3 font-medium">
+                          Action
+                        </th>
                       </tr>
                     </thead>
                     <tbody />
