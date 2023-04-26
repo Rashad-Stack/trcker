@@ -5,21 +5,21 @@ import { message, notification } from "./dasboardIcons";
 
 export default function DashboardHeader() {
   return (
-    <div className="mx-auto lg:ml-80">
+ 
       <section className="p-7 bg-light-secondary dark:bg-dark-secondary shadow-xl">
         <nav>
-          <div className="relative flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex items-center mr-auto">
               <button className="flex items-center">
                 <span className="flex justify-center items-center mr-3 w-6 h-6 rounded-full">
                   <img src={logo} alt="logo" />
                 </span>
-                <p className="text-gray-700 dark:text-dark-paragraph text-sm font-medium mr-2">
+                <p className="text-gray-700 dark:text-dark-paragraph text-sm font-medium">
                   Dashboard
                 </p>
               </button>
             </div>
-            <ul className="flex lg:justify-end gap-4">
+            <ul className="flex gap-4">
               <NavButton
                 title="Number of text messages left"
                 to="/panel/buysms"
@@ -44,6 +44,5 @@ export default function DashboardHeader() {
           </div>
         </nav>
       </section>
-    </div>
   );
 }
