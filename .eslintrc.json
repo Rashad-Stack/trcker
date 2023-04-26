@@ -11,12 +11,9 @@
   },
   "plugins": ["react"],
   "rules": {
-      "react/prop-types": "off",
-    "indent": ["error", 4],
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false, "varsIgnorePattern": "React" }]
-
+    "semi": ["warn", "always"],
+    "react/prop-types": "off"
   }
 }

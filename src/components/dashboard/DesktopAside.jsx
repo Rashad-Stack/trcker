@@ -22,7 +22,7 @@ export default function DesktopAside({ isShown }) {
 
   return (
     <div
-      className={`lg:block navbar-menu relative z-50 ${
+      className={`lg:block navbar-menu z-50 ${
         isShown ? "block" : "hidden"
       }`}
     >
