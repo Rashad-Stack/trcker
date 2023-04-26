@@ -4,7 +4,7 @@ import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
 import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
-import { FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
+import { BrandMonitoring, ChromePlugin, FacebookWebhook, SlackIntegration } from "./pages/footerLinks";
 import {
   Affiliate,
   Dashboard,
@@ -36,6 +36,8 @@ function App() {
           path="/slack-integration-for-facebook-groups"
           element={<SlackIntegration />}
         />
+        <Route path="/how-to-monitor-brands-on-facebook-groups" element={<BrandMonitoring />} />
+        <Route path="/chrome-plugin-for-monitoring-facebook-groups" element={<ChromePlugin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>

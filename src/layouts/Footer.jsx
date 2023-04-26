@@ -77,7 +77,7 @@ export default function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-gray-700 dark:text-dark-paragraph"
-                    href="/chrome-plugin-for-monitoring-facebook-groups"
+                    to="/chrome-plugin-for-monitoring-facebook-groups"
                     title="Chrome plugin for Facebook Groups GroupsTracker.com"
                   >
                     Chrome plugin
