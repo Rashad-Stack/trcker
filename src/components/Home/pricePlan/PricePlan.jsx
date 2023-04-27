@@ -3,19 +3,27 @@ import React from "react";
 import Button from "./Button";
 import ListItem from "./ListItem";
 
-export default function PricePlan() {
+export default function PricePlan({ dashboard }) {
   return (
-    <section className="py-20 bg-light-secondary dark:bg-dark-secondary">
-      <div className="container max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto mb-16 text-center">
-          <span className="font-bold text-primary">Simple plans</span>
-          <h2 className="mb-2 text-4xl font-bold text-black dark:text-white lg:text-5xl font-heading">
-            Choose your best plan
-          </h2>
-          <p className="mb-6 text-gray-700 dark:text-dark-paragraph">
-            You can change plan anytime. Includes taxes.
-          </p>
-        </div>
+    <section className={`${dashboard?"py-8":"py-20"} bg-light-secondary dark:bg-dark-secondary`}>
+      <div
+        className={`${
+          dashboard
+            ? "w-full sm:px-6 lg:px-8"
+            : "container max-w-6xl px-4 mx-auto sm:px-6 lg:px-8"
+        }`}
+      >
+        {!dashboard && (
+          <div className="max-w-2xl mx-auto mb-16 text-center">
+            <span className="font-bold text-primary">Simple plans</span>
+            <h2 className="mb-2 text-4xl font-bold text-black dark:text-white lg:text-5xl font-heading">
+              Choose your best plan
+            </h2>
+            <p className="mb-6 text-gray-700 dark:text-dark-paragraph">
+              You can change plan anytime. Includes taxes.
+            </p>
+          </div>
+        )}
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 mb-8 md:w-1/2 lg:w-1/3 lg:mb-0">
             <div className="p-8 rounded shadow-xl bg-light-tertiary dark:bg-dark-tertiary">
