@@ -1,12 +1,14 @@
 import React from "react";
 import { DashboardLayout } from "../../layouts";
 import {
-  AllGroupsDropdown,
   FoundPost,
   PostFilterButtons
 } from "../../components/dashboard/PostAndComments";
-import Dots from "../../components/dashboard/PostAndComments/Dots";
-import PaginateButton from "../../components/dashboard/PostAndComments/PaginateButton";
+import {
+  AllGroupsDropdown,
+  Dots,
+  PaginateButton
+} from "../../components/dashboard";
 
 export default function PostsAndComments() {
   return (
