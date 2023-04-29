@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function NavButton({ title, to, icon }) {
   return (
-    <li className="group flex">
+    <li className="group flex relative">
       <Link className="text-gray-700 dark:text-dark-paragraph" to={to}>
         <span className="text-gray-700 dark:text-dark-paragraph font-bold">
           {icon}

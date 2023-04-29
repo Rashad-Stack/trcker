@@ -8,7 +8,7 @@ export default function ManageMember() {
 
   return (
     <div className="my-8">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <FilterButton
           title="Members of the group (0)"
           active={active.filter === "unBloke"}

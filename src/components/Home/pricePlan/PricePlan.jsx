@@ -9,7 +9,7 @@ export default function PricePlan({ dashboard }) {
       <div
         className={`${
           dashboard
-            ? "w-full sm:px-6 lg:px-8"
+            ? "w-full"
             : "container max-w-6xl px-4 mx-auto sm:px-6 lg:px-8"
         }`}
       >

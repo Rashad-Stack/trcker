@@ -12,11 +12,11 @@ export default function Keywords() {
   return (
     <DashboardLayout>
       <div className="mx-auto lg:ml-80">
-        <div className="container px-4 mx-auto">
+        <div className="container mx-auto">
           <div>
-            <div className="container px-4 mx-auto">
+            <div className="container mx-auto">
               <section className="py-8">
-                <div className="container px-4 mx-auto" />
+                <div className="container mx-auto" />
                 <form onSubmit={handleSubmit}>
                   <div className="p-6 bg-light-tertiary dark:bg-dark-tertiary rounded shadow-xl">
                     <div className="flex justify-between items-center mb-6">
@@ -104,13 +104,13 @@ export default function Keywords() {
                 </form>
               </section>
             </div>
-            <div className="container px-4 mx-auto">
+            <div className="container mx-auto">
               <h2 className="text-light-title dark:text-white fmb-4 text-2xl font-bold">
                 Your keywords
               </h2>
             </div>
             <section>
-              <div className="container px-4 mx-auto">
+              <div className="container mx-auto">
                 <div className="text-gray-700 dark:text-dark-paragraph w-full py-8 font-bold">
                   All Groups{" "}
                 </div>

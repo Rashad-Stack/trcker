@@ -7,7 +7,7 @@ export default function DashboardHeader() {
   return (
  
       <section className="p-7 bg-light-secondary dark:bg-dark-secondary shadow-xl">
-        <nav>
+        <nav className="mx-auto lg:ml-80">
           <div className="flex items-center gap-4">
             <div className="flex items-center mr-auto">
               <button className="flex items-center">

@@ -14,7 +14,7 @@ export default function PostsAndComments() {
   return (
     <DashboardLayout>
       <div className="mx-auto lg:ml-80">
-        <div className="pt-8 px-4">
+        <div className="container mx-auto pt-8">
           <FoundPost />
           <div className="flex flex-wrap items-center justify-between text-sm text-center py-8">
             <AllGroupsDropdown />

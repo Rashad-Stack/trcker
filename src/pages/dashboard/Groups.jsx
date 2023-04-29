@@ -11,9 +11,9 @@ export default function Groups() {
   return (
     <DashboardLayout>
       <div className="mx-auto lg:ml-80">
-        <div className="container px-4 mx-auto">
+        <div className="container mx-auto">
           <section className="py-8">
-            <div className="container px-4 mx-auto">
+            <div className="container mx-auto">
               <div className="flex flex-wrap items-stretch -m-4">
                 <div className="w-full p-4 lg:w-2/3">
                   <form onSubmit={handleSubmit}>
@@ -60,7 +60,7 @@ export default function Groups() {
             </div>
           </section>
         </div>
-        <div className="container px-4 mx-auto">
+        <div className="container mx-auto">
           <div>
             <div className="px-4">
               <h2 className="text-light-title dark:text-white text-2xl font-bold fmb-4">
@@ -68,7 +68,7 @@ export default function Groups() {
               </h2>
             </div>
             <section className="py-8">
-              <div className="container px-4 mx-auto">
+              <div className="container mx-auto">
                 <div className="p-4 mb-6 bg-light-tertiary dark:bg-dark-tertiary rounded shadow-xl">
                   <table className="w-full table-auto">
                     <thead>
