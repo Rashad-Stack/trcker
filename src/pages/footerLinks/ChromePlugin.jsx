@@ -6,6 +6,7 @@ import ChoromePluginList from "../../components/footer/choromePlugin/choromePlug
 import HowToUse from "../../components/footer/HowToUse/HowToUse";
 import HowToWork from "../../components/footer/howToWork/HowToWork";
 import WantMonitor from "../../components/footer/wantMonitor/WantMonitor";
+import { FaCheck } from "react-icons/fa";
 
 
 export default function ChromePlugin() {
@@ -43,12 +44,22 @@ export default function ChromePlugin() {
             </p>
             <ul>
               {" "}
-              <ChoromePluginList title="monitor any facebook group (public or private)"/>
+              <ChoromePluginList title="monitor any facebook group (public or private)">
+              <FaCheck size={12}/>
+              </ChoromePluginList>
               <ChoromePluginList title="follow a group, even if you are not the group's admin, but only
-                a member"/>
-              <ChoromePluginList title="follow posts and comments by keywords"/>
-              <ChoromePluginList title="et notified whenever a new post with your keyword is published"/>
-              <ChoromePluginList title="turn off your computer as all work is done on the server"/>
+                a member">
+              <FaCheck size={12}/>
+              </ChoromePluginList>
+              <ChoromePluginList title="follow posts and comments by keywords">
+              <FaCheck size={12}/>
+              </ChoromePluginList>
+              <ChoromePluginList title="et notified whenever a new post with your keyword is published">
+              <FaCheck size={12}/>
+              </ChoromePluginList>
+              <ChoromePluginList title="turn off your computer as all work is done on the server">
+              <FaCheck size={12}/>
+              </ChoromePluginList>
               
             </ul>
             <p />

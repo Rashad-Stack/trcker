@@ -4,7 +4,7 @@ import useAuthCheck from "./hooks/useAuthCheck";
 import { PrivetRoutes, PublicRoutes } from "./routes";
 import { Login, Register } from "./pages/auth";
 import { Contact, Home, HowItWorks, PricingPlan } from "./pages";
-import { BrandMonitoring, ChromePlugin, FacebookWebhook, MemberExtracting, SlackIntegration, TermsConditions } from "./pages/footerLinks";
+import { BrandMonitoring, ChromePlugin, FacebookWebhook, MemberExtracting, PrivacyPolicy, SlackIntegration, TermsConditions } from "./pages/footerLinks";
 import {
   Affiliate,
   Dashboard,
@@ -46,6 +46,7 @@ function App() {
         
         {/* Important Links */}
         <Route path="/terms-of-service" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
 
       </Route>
