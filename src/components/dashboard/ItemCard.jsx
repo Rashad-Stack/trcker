@@ -1,12 +1,17 @@
 import React from "react";
-import { facebook } from "./dasboardIcons";
+import { Link } from "react-router-dom";
+import { GrFacebookOption } from "react-icons/gr";
+import { BsTelephoneFill } from "react-icons/bs";
+import { HiHome } from "react-icons/hi";
+import { AiFillLock } from "react-icons/ai";
 
 export default function ItemCard() {
   return (
-    <div className="w-full lg:w-1/2 bg-light-tertiary dark:bg-dark-tertiary rounded">
+    <div className="w-full lg:w-1/2 bg-light-tertiary dark:bg-dark-tertiary rounded p-4">
       <div className="flex flex-wrap gap-4">
-        <div className="w-32">
+        <div className="w-full sm:w-32">
           <img
+            className="w-full object-cover"
             src="https://randomuser.me/api/portraits/women/60.jpg"
             alt="user"
           />
@@ -18,14 +23,56 @@ export default function ItemCard() {
           <p className="text-sm text-gray-700 dark:text-dark-paragraph">
             Berkshire Hathaway HomeService Woodmont reality
           </p>
+          <div className="w-full flex items-center gap-2 mt-2">
+            <Link to="#" className="text-primary">
+              <BsTelephoneFill size={15} />
+            </Link>
+            <Link to="#" className="text-primary">
+              <GrFacebookOption size={20} />
+            </Link>
+            <Link to="#" className="text-primary">
+              <HiHome size={20} />
+            </Link>
+          </div>
+          <div className="w-full mt-4 py-2">
+            <p className="flex items-center text-xs text-gray-700 dark:text-dark-paragraph mb-1">
+              Posted 3 days ago in
+              <Link to="#" className="flex items-center text-primary text-xs">
+                Lab coat agents: Referrals (<AiFillLock size={10} />)
+              </Link>
+            </p>
+
+            <p className="text-xs text-gray-700 dark:text-dark-paragraph">
+              notification send via email and slack
+            </p>
+          </div>
         </div>
-        <div>
-          <span>
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-              <path d="M430.91 32H81.09C55.38 32 35 52.38 35 78.09v355.82c0 25.71 20.38 46.09 46.09 46.09h349.82c25.71 0 46.09-20.38 46.09-46.09V78.09C477 52.38 456.62 32 430.91 32zM370 204h-55.72c-13.38 0-14.22 5.09-14.22 14.47v52.36h69.34l-9.13 69.33h-60.21v177.84h-73.45V339.16H166v-69.33h62.66v-52.36c0-60.88 37.29-94.14 91.39-94.14 26.93 0 56.29 5.06 56.29 5.06l7.68-52.52s-33.84-9.15-64.53-9.15c-83.55 0-137.14 50.79-137.14 142.48v60.03H142v69.33h52.66v177.84h73.45V339.16h55.71L370 204z" />
-            </svg>
+      </div>
+      <div className="border-b border-t border-gray-300 dark:border-gray-700 py-6">
+        <p className="text-md text-gray-700 dark:text-dark-paragraph">
+          Seeking an experienced listing agent in{" "}
+          <span className="bg-primary rounded-l-xl rounded-t-xl p-1">
+            Austin
           </span>
-        </div>
+          <span className="bg-primary rounded-l-xl rounded-t-xl p-1">
+            Texas
+          </span>
+          Please PM me
+        </p>
+      </div>
+      <div className="py-4 flex gap-3 items-center">
+        <Link
+          to="#"
+          className="bg-blue-700 text-white rounded flex w-full md:w-32 h-10 justify-center items-center gap-1"
+        >
+          <GrFacebookOption /> Go to Post
+        </Link>
+        <Link
+          to="#"
+          className="bg-primary text-white py-2 px-4 rounded flex h-10 justify-center items-center gap-1  w-full md:w-32"
+        >
+          <BsTelephoneFill /> Call Agent
+        </Link>
       </div>
     </div>
   );
