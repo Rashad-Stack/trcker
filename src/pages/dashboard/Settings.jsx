@@ -21,7 +21,7 @@ export default function Settings() {
 
   return (
     <DashboardLayout>
-      <div className="mx-auto lg:ml-80">
+      <div className="mx-auto lg:ml-80 px-8">
         <div className="container mx-auto">
           <h2 className="text-light-title dark:text-white mt-4 mb-4 text-2xl font-bold">
             Settings:

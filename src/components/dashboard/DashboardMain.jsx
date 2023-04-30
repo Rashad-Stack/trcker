@@ -6,7 +6,7 @@ import ItemCard from "./ItemCard";
 
 export default function DashboardMain() {
   return (
-    <div className="mx-auto lg:ml-80">
+    <div className="mx-auto lg:ml-80 px-8">
       <div className="container mx-auto">
         <div className="py-8">
           <div className="container mx-auto">

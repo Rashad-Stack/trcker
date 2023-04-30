@@ -51,10 +51,10 @@ export default function ItemCard() {
       <div className="border-b border-t border-gray-300 dark:border-gray-700 py-6">
         <p className="text-md text-gray-700 dark:text-dark-paragraph">
           Seeking an experienced listing agent in{" "}
-          <span className="bg-primary rounded-l-xl rounded-t-xl p-1">
+          <span className="bg-primary rounded-l-xl rounded-t-xl p-1 text-white">
             Austin
           </span>
-          <span className="bg-primary rounded-l-xl rounded-t-xl p-1">
+          <span className="bg-primary rounded-l-xl rounded-t-xl p-1 text-white">
             Texas
           </span>
           Please PM me
