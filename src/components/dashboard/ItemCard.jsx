@@ -35,8 +35,8 @@ export default function ItemCard() {
             </Link>
           </div>
           <div className="w-full mt-4 py-2">
-            <p className="flex items-center text-xs text-gray-700 dark:text-dark-paragraph mb-1">
-              Posted 3 days ago in
+            <p className="flex items-center text-xs text-gray-700 dark:text-dark-paragraph mb-1 gap-1">
+              Posted 3 days ago in 
               <Link to="#" className="flex items-center text-primary text-xs">
                 Lab coat agents: Referrals (<AiFillLock size={10} />)
               </Link>
