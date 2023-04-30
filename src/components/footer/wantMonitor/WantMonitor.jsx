@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../ui";
 
 export default function WantMonitor() {
   return (
@@ -7,12 +8,7 @@ export default function WantMonitor() {
       <h2 className="mb-4 text-4xl lg:text-5xl font-bold font-heading text-light-title dark:text-white">
         Want to monitor facebook groups?
       </h2>
-      <Link
-        className="inline-block py-2 px-6 bg-pink-600 hover:bg-pink-700 text-white font-bold leading-loose rounded-l-xl rounded-t-xl transition duration-200"
-        to="/register"
-      >
-        Get started
-      </Link>
+      <Button colored title="Get started" to="/register" />
     </div>
   );
 }
