@@ -67,7 +67,7 @@ export default function OwnServer() {
               onChange={handleFileUpload}
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-6 w-32">
             <img src={file} />
           </div>
           <div className="mb-6">
@@ -76,9 +76,7 @@ export default function OwnServer() {
             </button>
           </div>
           <div className="mb-6">
-            <p
-              className="p-4 text-sm text-white hidden rounded"
-            />
+            <p className="p-4 text-sm text-white hidden rounded" />
           </div>
         </div>
       </div>

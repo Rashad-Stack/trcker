@@ -10,7 +10,7 @@ export default function Groups() {
 
   return (
     <DashboardLayout>
-      <div className="mx-auto lg:ml-80">
+      <div className="mx-auto lg:ml-80 px-8">
         <div className="container mx-auto">
           <section className="py-8">
             <div className="container mx-auto">
