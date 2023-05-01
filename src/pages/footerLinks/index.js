@@ -6,3 +6,4 @@ export { default as MemberExtracting} from "./MemberExtracting";
 export { default as TermsConditions} from "./TermsConditions";
 export { default as PrivacyPolicy } from "./PrivacyPolicy";
 export { default as Alternative } from "./Alternative";
+export { default as AlternativePhantombuster } from "./AlternativePhantombuster";

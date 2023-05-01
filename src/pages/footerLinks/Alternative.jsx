@@ -21,21 +21,12 @@ export default function Alternative() {
               Are you looking for better or cheaper service then Groouply.com?{" "}
             </p>{" "}
           </div>
-        <AlternativeAbout />
-        <MuchLowerPrice />
-        <FreePlanDemo />
-        <GreatKeywords />
-        <FairCompetition />
-        <FbGroups />
-
-    
-
-
-
-
-  
-
-
+          <AlternativeAbout />
+          <MuchLowerPrice />
+          <FreePlanDemo />
+          <GreatKeywords />
+          <FairCompetition />
+          <FbGroups />
         </div>
         <Comments />
       </section>
