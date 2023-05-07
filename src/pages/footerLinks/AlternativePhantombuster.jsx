@@ -22,15 +22,12 @@ export default function AlternativePhantombuster() {
               Phantombuster.com?{" "}
             </p>{" "}
           </div>
-
-        <PhantombusterAbout />
-        <Safety />
-        <DesignedFbGroup />
-        <EasierUse />
-        <FreePlan />
-        <FbGroupsTracking />
-
-
+          <PhantombusterAbout />
+          <Safety />
+          <DesignedFbGroup />
+          <EasierUse />
+          <FreePlan />
+          <FbGroupsTracking />
         </div>
         <Comments />
       </section>

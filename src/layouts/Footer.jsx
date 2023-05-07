@@ -159,7 +159,7 @@ export default function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-gray-700 dark:text-dark-paragraph"
-                    to="/help"
+                    to="/faq"
                     title="Help for GroupsTracker.com"
                   >
                     FAQ
